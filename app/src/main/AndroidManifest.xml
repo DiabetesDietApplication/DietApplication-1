@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dell.DDAPP">
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,12 +18,71 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BMRActivity">
+        <receiver
+            android:name=".AlertReciever"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".AlarmReciever"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".Notify"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".Doctor_notify"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".MainActivity" />
+        <activity android:name=".BMRActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SecondActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".SignUpSecondActivity" />
+        <activity
+            android:name=".Navigation_WaterIntakeActivity"
+            android:label="@string/title_activity_navigation__water_intake"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".DietActivity" />
+        <activity android:name=".reminder" />
+        <activity android:name=".AutoLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity android:name=".Diet_plan" />
+        <activity android:name=".firebaseActivity" />
+        <activity android:name=".StepsActivity" />
+        <activity android:name=".dataRetrieval" />
+        <activity
+            android:name=".Navigation_reminder"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Navigation_stepCounter"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NavigationSettings"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Navigation_Diet"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".GlucoseNotify" />
+        <activity
+            android:name=".Navigation_tips"
+            android:label="@string/title_activity_navigation_tips"
+            android:theme="@style/AppTheme.NoActionBar">
+
+
+
         </activity>
     </application>
 
