@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4DB6AC">
+
+
+    <EditText
+        android:id="@+id/etUserEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:drawableLeft="@drawable/ic_action_name"
+        android:ems="10"
+        android:fontFamily="cursive"
+        android:hint="Email ID"
+        android:inputType="textEmailAddress"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"/>
+
+    <EditText
+        android:id="@+id/etUserPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etUserEmail"
+        android:layout_alignStart="@+id/etUserEmail"
+        android:layout_below="@+id/etUserEmail"
+        android:layout_marginTop="150dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/ic_action_pass"
+        android:fontFamily="cursive"
+        android:hint="Password"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"/>
+
+    <EditText
+        android:id="@+id/etUserPassword2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etUserPassword"
+        android:layout_alignStart="@+id/etUserPassword"
+        android:layout_below="@+id/etUserPassword"
+        android:layout_marginTop="250dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/ic_action_pass"
+        android:fontFamily="cursive"
+        android:hint="Confirm Password"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        />
+
+    <Button
+        android:id="@+id/btnLogin1"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="cursive"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnLogin1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="cursive"
+        android:text="SignUp"
+        android:textColor="@android:color/white"
+        android:textSize="30dp" />
+
+</RelativeLayout>
